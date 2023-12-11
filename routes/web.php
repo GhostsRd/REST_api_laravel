@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/meteo', [App\Http\Controllers\Api\Meteo::class, 'index']);
+Route::post('/meteo/search', [App\Http\Controllers\Api\Meteo::class, 'search']);
